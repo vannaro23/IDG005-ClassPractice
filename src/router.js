@@ -2,6 +2,7 @@ import SignIn from '@/components/pages/SignIn.vue';
 import SignUp from '@/components/pages/SignUp.vue';
 import SignOut from '@/components/pages/SignOut.vue';
 import Dashboard from '@/components/pages/dashboard.vue';
+import Profile from './components/pages/profile.vue';
 
 import Navbar from '@/components/includes/navbar.vue';
 import Sidebar from '@/components/includes/sidebar.vue';
@@ -40,6 +41,19 @@ const routes = [
         },
         meta: { guarded: true },
     },
+
+   {
+        path: '/profile',
+        name: 'Profile',
+        components: {
+            navbar: Navbar,
+            sidebar: Sidebar,
+            footer: Footer,
+            default: Profile,
+        },
+        meta: { guarded: true },
+    },
+
     { path: '/:pathMatch(.*)*', redirect: { name: 'SignIn' } },
 ];
 
