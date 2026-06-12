@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
     <h1>Dashboard</h1>
     <RouterLink to="/signup">Go to Sign Up</RouterLink>
     <br>
@@ -10,7 +10,7 @@
     <br>
     <button @click="goBack">Go Back</button>
     <button @click="goForward">Go Forward</button>
-</template>
+</template> -->
 
 <script setup>
 import { useRouter } from 'vue-router'
