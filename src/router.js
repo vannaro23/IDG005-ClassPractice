@@ -1,13 +1,15 @@
 import SignIn from '@/components/pages/SignIn.vue';
 import SignUp from '@/components/pages/SignUp.vue';
 import SignOut from '@/components/pages/SignOut.vue';
+import Profile from '@/components/pages/profile.vue';
 import Dashboard from '@/components/pages/dashboard.vue';
-import Profile from './components/pages/profile.vue';
 
 import Navbar from '@/components/includes/navbar.vue';
 import Sidebar from '@/components/includes/sidebar.vue';
 import Footer from '@/components/includes/footer.vue';
 
+import Test from '@/components/pages/Test.vue';
+import Student from '@/components/pages/Student.vue';
 
 import { createRouter, createWebHistory } from 'vue-router';
 const routes = [
@@ -31,18 +33,6 @@ const routes = [
         // The authentication state will be handled in the SignOut component.
     },
     {
-        path: '/dashboard',
-        name: 'Dashboard',
-        components: {
-            navbar: Navbar,
-            sidebar: Sidebar,
-            footer: Footer,
-            default: Dashboard,
-        },
-        meta: { guarded: true },
-    },
-
-   {
         path: '/profile',
         name: 'Profile',
         components: {
@@ -53,7 +43,39 @@ const routes = [
         },
         meta: { guarded: true },
     },
-
+    {
+        path: '/dashboard',
+        name: 'Dashboard',
+        components: {
+            navbar: Navbar,
+            sidebar: Sidebar,
+            footer: Footer,
+            default: Dashboard,
+        },
+        meta: { guarded: true },
+    },
+    {
+        path: '/tests',
+        name: 'Tests',
+        components: {
+            navbar: Navbar,
+            sidebar: Sidebar,
+            footer: Footer,
+            default: Test,
+        },
+        meta: { guarded: true },
+    },
+    {
+        path: '/students',
+        name: 'Students',
+        components: {
+            navbar: Navbar,
+            sidebar: Sidebar,
+            footer: Footer,
+            default: Student,
+        },
+        meta: { guarded: true },
+    },
     { path: '/:pathMatch(.*)*', redirect: { name: 'SignIn' } },
 ];
 

@@ -30,6 +30,22 @@
                             </p>
                         </RouterLink>
                     </li>
+
+                    <li class="nav-header">
+                        Academic Management
+                    </li>
+                    <li class="nav-item">
+                        <router-link :to="{ name: 'Students' }" active-class="active" class="nav-link">
+                            <i class="nav-icon fas fa-users"></i>
+                            <p>Students</p>
+                        </router-link>
+                    </li>
+                    <li class="nav-item">
+                        <router-link :to="{ name: 'Tests' }" active-class="active" class="nav-link">
+                            <i class="nav-icon fas fa-vial"></i>
+                            <p>Tests</p>
+                        </router-link>
+                    </li>
                 </ul>
             </nav>
             <!-- /.sidebar-menu -->
@@ -39,11 +55,8 @@
 </template>
 
 <script setup>
-
 import logoImage from '@/assets/images/logoImago.webp';
 import emptyImage from '@/assets/images/emptyImage.png';
-
 import { useUserStore } from '@/stores/user';
 const userStore = useUserStore();
-
 </script>
